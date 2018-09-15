@@ -1,0 +1,194 @@
+* {box-sizing: border-box}
+
+/* Setting General */
+body {margin: 0px;}
+
+#interface{
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    height: 3000px;
+    position: relative;
+    font-family: sans-serif;
+}
+a {text-decoration: none;}
+
+/* Setting que header main*/
+#logomarca {
+    display: block;
+    margin: auto;
+    width: 220px;
+}
+
+header#main {
+    height: 700px;
+    background: url("../images/fundoweb3.png");
+    background-position:top;
+    position: relative;
+}
+
+/* Setting the menu for desktop*/
+
+#desktop {
+    width: 100%;
+    max-width: 1500px;
+}
+#desktop ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    max-width: 998px;
+    margin: auto;
+    color: #00499d;  
+}
+#desktop ul li {
+    float: left;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#desktop a{
+    padding: 20px 10px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+.link.link2:hover, .open_icon:hover {
+    color: white;
+    background-color: #00499d;
+}
+#dropdown {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 140.06px;
+    display: none;
+}
+#dropdown a {
+    display:block;
+    transition: 0.5s;
+}
+#dropdown a:hover {
+    color: white;
+    background-color: #00499d;
+}
+#produto:hover #dropdown {
+    display: block;
+    color: #00499d;
+}
+.fit, .fit1, .fit2, .fit3 {
+    margin-left: 10px;
+}
+.material-icons {
+    vertical-align: bottom;
+    font-size: 30px;
+}
+@media only screen and (min-width: 698px){
+    #desktop ul {max-width: 698px;}
+}
+@media only screen and (max-width: 853px){
+    .fit1, .fit2, .fit3 {display:none;}
+}
+@media only screen and (min-width: 854px){
+    #desktop ul {max-width: 833px;}
+}
+@media only screen and (max-width:987px){
+    .fit2, .fit3 {display: none;}
+}
+@media only screen and (min-width: 988px){
+    #desktop ul {max-width: 968px;}
+}
+@media only screen and (max-width:1073px){
+    .fit3 {display: none;}  
+}
+@media only screen and (min-width: 1074px){
+    #desktop ul {max-width: 1051px;}
+}
+@media only screen and (max-width:714px){
+    #desktop {display: none;}
+}
+
+/* Menu Mobile_phone*/
+#Chase_icon {
+   min-width: 290px;
+   height: 89px;
+   overflow: hidden;
+   width: 100%;
+   transition: 0.5s;
+   position: fixed;
+   top: 0px;
+   background-color: #ffffff;
+   display: none;
+   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.40);
+}
+#logomarcaMP {
+   width: 200px;
+   margin: 15px auto;
+   display: block;
+}
+@media only screen and (max-width:450px){
+   #logomarcaMP {
+       margin: 15px 0xp;
+       margin-left: 10px;
+   }
+}
+#overlay_content .fit {
+    margin-left: 10px;
+}
+.open_icon{
+    font-size: 45px;
+    color: #00397b;
+    padding: 7px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.40);
+    border-radius: 10px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    transition: 0.5s;
+}
+#overlay {
+    position: fixed;
+    background-color: #ffffff;
+    top: 0px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+#overlay_content {
+    margin-top: 120px;
+    position: relative;
+}
+#close_icon {
+    font-size: 60px;
+    color: #00499d;
+    font-weight: bold;
+    float: right;
+    margin: 10px 28px;
+    font-family: serif;
+}
+#close_icon:hover {
+    color: red;
+}
+#overlay_content a {
+    display: block;
+    width: 220px;
+    margin: auto;
+    font-size: 20px;
+    color: #00499d;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#overlay_content a:hover {
+    color: #01254e;
+}
+@media only screen and (min-width: 715px){
+    #mobile_phone{display: none}
+}

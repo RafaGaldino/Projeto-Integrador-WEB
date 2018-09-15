@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns lang="pt-br">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="ESCREVER DEPOIS"/>
+    <meta name="keywords" content="ESCREVER DEPOIS"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="content-language" content="pt-br"/>
+    <meta name="DC.Identifier" content="URL"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/pata_ico.ico"/>
+    <script src="../javascript/index.js"></script>
+    <title>BompraCachorro!</title>
+  </head>
+  <body>
+    <div id="interface">
+        <header id="main">
+          <img id="logomarca" src="../images/logomarca2.png" alt="logomarca"/>
+          <nav id="desktop">
+            <ul>
+              <li title="Início" class="link"><a><span class="material-icons">arrow_upward</span><span class="fit">Home</span></a></li>
+              <li title="Vantagens" class="link"><a><span class="material-icons">thumb_up</span><span class="fit">Vantagens</span></a></li>
+              <li title="Produtos" id="produto" class="link">
+              <a><span class="material-icons">pets</span><span class="fit">Produtos</span></a>
+              <div id="dropdown">
+                  <a title="Produtos para cães">Cães</a>
+                  <a title="Produtos para gatos">Gatos</a>
+                  <a title="Produtos para peixes">Peixes</a>
+                  <a title="Produtos para aves">Aves</a>
+                  <a title="Produtos para animais exóticos">Exóticos</a>
+              </div>
+              </li>
+              <li title="Serviço" class="link"><a><span class="material-icons">assignment</span><span class="fit">Serviços</span></a></li>
+              <li title="Meus pedidos" class="link"><a><span class="material-icons">shopping_cart</span><span class="fit1">Meus pedidos</span></a></li>
+              <li title="Crie sua conta" class="link"><a><span class="material-icons">person_add</span><span class="fit2">Crie sua conta</span></a></li>
+              <li title="Contato" class="link"><a><span class="material-icons">email</span><span class="fit3">Contato</span></a></li>   
+            </ul>
+          </nav>
+          <nav id="mobile_phone">
+            <div id="Chase_icon">
+              <img id="logomarcaMP" src="../images/logoh2.png" alt="logomarca do pet shop BompraCachorro!"/>
+              <a href="javascript:void(0)" onclick="open_mobileMenu()"><span class="material-icons open_icon">reorder</span></a>
+            </div>
+            <a href="javascript:void(0)" onclick="open_mobileMenu()"><span class="material-icons open_icon">reorder</span></a>
+            <div id="overlay">
+              <a href="javascript:void(0)"><span id="close_icon" onclick="close_mobileMenu()">&times;</span></a>
+              <div id="overlay_content">
+                <a onclick="close_mobileMenu()"><span class="material-icons">arrow_upward</span><span class="fit">Home</span></a>
+                <a onclick="close_mobileMenu()"><span class="material-icons">thumb_up</span><span class="fit">Vantagens</span></a>
+                <a onclick="close_mobileMenu()"><span class="material-icons">pets</span><span class="fit">Produtos</span></a>
+                <a onclick="close_mobileMenu()"><span class="material-icons">assignment</span><span class="fit">Serviços</span></a>
+                <a onclick="close_mobileMenu()"><span class="material-icons">shopping_cart</span><span class="fit">Meus pedidos</span></a>
+                <a onclick="close_mobileMenu()"><span class="material-icons">person_add</span><span class="fit">Crie sua conta</span></a>
+                <a onclick="close_mobileMenu()"><span class="material-icons">email</span><span class="fit">Contato</span></a>
+              </div>
+            </div>
+          </nav>
+        </header>
+    </div>
+  </body>
+</html>
