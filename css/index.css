@@ -32,6 +32,7 @@ header#main {
 #desktop {
     width: 100%;
     max-width: 1500px;
+    z-index: 2;
 }
 #desktop ul {
     list-style: none;
@@ -92,22 +93,22 @@ header#main {
 @media only screen and (min-width: 698px){
     #desktop ul {max-width: 698px;}
 }
-@media only screen and (max-width: 853px){
+@media only screen and (max-width: 900px){
     .fit1, .fit2, .fit3 {display:none;}
 }
-@media only screen and (min-width: 854px){
+@media only screen and (min-width: 901px){
     #desktop ul {max-width: 833px;}
 }
-@media only screen and (max-width:987px){
+@media only screen and (max-width:1000px){
     .fit2, .fit3 {display: none;}
 }
-@media only screen and (min-width: 988px){
+@media only screen and (min-width: 1001px){
     #desktop ul {max-width: 968px;}
 }
-@media only screen and (max-width:1073px){
+@media only screen and (max-width:1090px){
     .fit3 {display: none;}  
 }
-@media only screen and (min-width: 1074px){
+@media only screen and (min-width: 1091px){
     #desktop ul {max-width: 1051px;}
 }
 @media only screen and (max-width:714px){
@@ -116,21 +117,22 @@ header#main {
 
 /* Menu Mobile_phone*/
 #Chase_icon {
-   min-width: 290px;
-   height: 89px;
-   overflow: hidden;
-   width: 100%;
-   transition: 0.5s;
-   position: fixed;
-   top: 0px;
-   background-color: #ffffff;
-   display: none;
-   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.40);
+    min-width: 290px;
+    height: 89px;
+    overflow: hidden;
+    width: 100%;
+    transition: 0.5s;
+    position: fixed;
+    top: 0px;
+    background-color: #ffffff;
+    display: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.40);
+    z-index:2;
 }
 #logomarcaMP {
-   width: 200px;
-   margin: 15px auto;
-   display: block;
+    width: 200px;
+    margin: 15px auto;
+    display: block;
 }
 @media only screen and (max-width:450px){
    #logomarcaMP {
@@ -160,6 +162,7 @@ header#main {
     height: 0px;
     overflow: hidden;
     transition: 0.5s;
+    z-index:3;
 }
 #overlay_content {
     margin-top: 120px;
@@ -189,6 +192,123 @@ header#main {
 #overlay_content a:hover {
     color: #01254e;
 }
-@media only screen and (min-width: 715px){
+@media only screen and (min-width: 714px){
     #mobile_phone{display: none}
 }
+
+/* Advertising */
+.advertising{
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: 1s;
+}
+@keyframes float {
+    0% {top: 250px;}
+    50% {top: 270px;}
+    100% {top: 250px;}
+}
+.advertising figure {
+    position: relative;
+    margin: 0px;
+}
+.bubbles{
+    position: absolute;
+}
+#b1{left: 80px; top: 367px}
+#b2{left: 90px; top: 340px}
+#b3{left: 78px; top: 315px}
+
+.advertising figcaption {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.advertising figcaption p {
+    margin-top: 110px;
+    transition: 0.5s;
+}
+.txt1{
+    font-size: 30px;
+    color: #00a585;  
+    font-family: 'Francois One', sans-serif;
+    transition: 0.5s;
+}
+.txt1-2{
+    font-size: 45px;
+    font-family: 'Merienda', cursive;
+    color: #00499d;
+    
+}
+.txt1-3{
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+    color: #00499d;
+}
+.txt1-4{
+    font-size: 45px;
+    color: #00a585;
+    font-family: 'Francois One', sans-serif;
+    transition: 0.5s;
+}
+
+/* Advertising 2 */
+.advertising2 {
+    position: absolute;
+    top: 350px;
+    right: 30px;
+    text-align: center;
+    font-size: 35px;
+    transition: 1s;
+    
+}
+.txt2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #00a585;
+}
+.txt2-2 {
+    font-family: 'Francois One', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#fit2 {display: block;}
+
+@media only screen and (max-width: 950px){
+    .advertising {display: none;}
+}
+@media only screen and (max-width: 1120px){
+    .advertising{left:-10px}
+    .advertising figcaption p {margin-top: 70px}
+    .txt1{font-size: 20px}
+    .txt1-2{font-size: 35px}
+    .txt1-3{font-size: 10px}
+    .txt1-4{font-size: 35px}
+    #bubble_main{ width: 380px;}
+    #b1{left: 60px; top: 260px}
+    #b2{left: 50px; top: 240px}
+    #b3{left: 48px; top: 215px}
+}
+@media only screen and (max-width: 1300px){
+    .advertising{left:-10px}
+}
+@media only screen and (max-width: 950px){
+    .advertising2 {display: none;}
+}
+@media only screen and (max-width: 1100px){
+    .advertising2 {font-size: 30px;}
+}
+@media only screen and (max-width: 1300px){
+    #fit1{display: inline}
+    #fit2{display: inline}
+    #fit3{display: block}
+    #fit4{display: block; line-height: 1.5;}
+}
+
+
+

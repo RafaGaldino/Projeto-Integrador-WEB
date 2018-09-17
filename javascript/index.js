@@ -1,3 +1,4 @@
+window.onload = function(){fish()}
 window.onscroll = function(){desktop_mobile();hide_chase_icon()}
 
 //This next code is used for change the desktop menu and mobile menu
@@ -45,3 +46,31 @@ function hide_chase_icon(){
     else{document.getElementById("Chase_icon").style.top = "-100px";}
     x = y;
 }
+
+// Start the bubbles of the fish
+var b = 0;
+    function fish(){
+        var i;
+        var bubbles = document.getElementsByClassName("bubbles");
+        for(i = 0; i < bubbles.length; i++ ){
+            bubbles[i].style.display = "none";
+        }
+        if (b > bubbles.length){ b = 0}
+        switch(b){
+            case 0:
+                break;
+            case 1:
+                bubbles[0].style.display = "block";
+                break;
+            case 2:
+                bubbles[0].style.display = "block";
+                bubbles[1].style.display = "block";
+                break;
+            case 3:
+                bubbles[0].style.display = "block";
+                bubbles[1].style.display = "block";
+                bubbles[2].style.display = "block"; 
+        }
+        b++;
+        setTimeout(fish, 450);
+    }
