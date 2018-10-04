@@ -1,8 +1,8 @@
-* {box-sizing: border-box}
+* {box-sizing: border-box;}
 
 /* Setting General */
 body {margin: 0px;}
-
+/*p {text-align: justify; text-indent: 5px;}*/
 #interface{
     width: 100%;
     max-width: 1500px;
@@ -42,7 +42,7 @@ header#main {
     width: 100%;
     max-width: 998px;
     margin: auto;
-    color: #00499d;  
+    color: #00499d;
 }
 #desktop ul li {
     float: left;
@@ -57,7 +57,7 @@ header#main {
     text-align: center;
 }
 .link:hover {
-    background-color: rgba(255, 255, 255, 0.90);
+    background-color: rgba(255, 255, 255);
 }
 .link.link2:hover, .open_icon:hover {
     color: white;
@@ -65,11 +65,19 @@ header#main {
 }
 #dropdown {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.90);
+    background-color: rgba(255, 255, 255);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     min-width: 140.06px;
     display: none;
+}
+#animal{
+  position: absolute;
+  width: 189px;
+  height: 100%;
+  background-color: rgb(244, 244, 244);
+  top:0px;
+  left: 140.06px;
 }
 #dropdown a {
     display:block;
@@ -106,7 +114,7 @@ header#main {
     #desktop ul {max-width: 968px;}
 }
 @media only screen and (max-width:1090px){
-    .fit3 {display: none;}  
+    .fit3 {display: none;}
 }
 @media only screen and (min-width: 1091px){
     #desktop ul {max-width: 1051px;}
@@ -234,7 +242,7 @@ header#main {
 }
 .txt1{
     font-size: 30px;
-    color: #00a585;  
+    color: #00a585;
     font-family: 'Francois One', sans-serif;
     transition: 0.5s;
 }
@@ -242,7 +250,7 @@ header#main {
     font-size: 45px;
     font-family: 'Merienda', cursive;
     color: #00499d;
-    
+
 }
 .txt1-3{
     font-size: 20px;
@@ -265,7 +273,7 @@ header#main {
     text-align: center;
     font-size: 35px;
     transition: 1s;
-    
+
 }
 .txt2 {
     font-family: 'Gloria Hallelujah', cursive;
@@ -309,6 +317,71 @@ header#main {
     #fit3{display: block}
     #fit4{display: block; line-height: 1.5;}
 }
+#benefits_section{
+  background-color: #11c9c9;
+  overflow: hidden;
+}
+#border{
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin:auto;
+}
+.benefits{
+  width: 180px;
+  height: 300px;
+  padding: 20px 0px;
+  text-align:center;
+  color: #ffffff;
+  margin: 0px 10px;
+  float: left;
+}
+.benefits img{
+  width:70px;
+  margin:auto;
+  position: relative;
+}
+.benefits p {
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.benefits h3{
+  color:  #00499d;
+  margin: 10px 0px;
+}
+.fit_h3{
+  display: block;
+  height:45px;
+}
+.fit2_h3{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.circle{
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  background-color: #48d2d2;
+}
+.benefits:hover .circle{
+  box-shadow: 0px 0px 30px white;
+}
+@media only screen and (max-width:420px){
+  #border{max-width: 200px;}
+}
+@media only screen and (min-width:421px){
+  #border{max-width: 400px}
+}
+@media only screen and (min-width: 621px){
+  #border{max-width: 600px}
+}
+@media only screen and (min-width: 1220px){
+  #border{max-width: 1200px}
+}
 
+/* Setting the Profiles
 
-
+#profiles{background-color: rgb(169, 241, 246)}
+*/

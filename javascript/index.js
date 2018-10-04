@@ -1,4 +1,4 @@
-window.onload = function(){fish()}
+window.onload = function(){fish();hide_benefits()}
 window.onscroll = function(){desktop_mobile();hide_chase_icon()}
 
 //This next code is used for change the desktop menu and mobile menu
@@ -9,7 +9,7 @@ function desktop_mobile(){
     if(viewport_width > 176){
         document.getElementById("desktop").style.position = "fixed";
         document.getElementById("desktop").style.top = "0px";
-        document.getElementById("desktop").style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+        document.getElementById("desktop").style.backgroundColor = "rgba(255, 255, 255)";
         document.getElementById("desktop").style.boxShadow = "0px 1px 1px rgba(0, 0, 0, 0.09)";
         for(i=0; i<link_collection.length;i++){
             link_collection[i].classList.add("link2");
@@ -34,7 +34,7 @@ function close_mobileMenu(){
 document.getElementById("overlay").style.height = "0px";
 }
 
-       
+
 var x = 0;
 function hide_chase_icon(){
     var y = window.pageYOffset;
@@ -69,8 +69,66 @@ var b = 0;
             case 3:
                 bubbles[0].style.display = "block";
                 bubbles[1].style.display = "block";
-                bubbles[2].style.display = "block"; 
+                bubbles[2].style.display = "block";
         }
         b++;
         setTimeout(fish, 450);
     }
+
+// This code change da images at the products menu
+function MenuImg(x){
+  y = document.getElementById("animal_imgs");
+  switch(x){
+    case 1:
+      y.src ="../images/menu_dog.png";
+      break;
+    case 2:
+      y.src = "../images/menu_cat.jpg";
+      break;
+    case 3:
+      y.src = "../images/menu_fish.png";
+      break;
+    case 4:
+      y.src = "../images/menu_bird.png";
+      break;
+    case 5:
+      y.src = "../images/menu_reptile.png"
+  }
+}
+
+// This code to use to hide the benefits when the view port is tiny
+window.onresize = function(){hide_benefits()}
+  var vwp;
+  var benefits = document.getElementsByClassName("benefits");
+  var benefits_index = 0;
+  var key = 1;
+  var Help_TimeEnd;
+
+  function hide_benefits(){
+    vwp = window.innerWidth||document.body.clientWidth||document.documentElement.clientWidth;
+    var i;
+    if(vwp <= 420){
+      if( key == 1){
+        key = 0;
+        toggle_benefits();
+      }
+    }
+    else{
+      for(i=0;i<benefits.length;i++){
+        benefits[i].style.display = "block";
+      }
+      clearTimeout(Help_TimeEnd);
+      key = 1;
+    }
+  }
+
+  function toggle_benefits(){
+    var i;
+    for(i=0;i<benefits.length;i++){
+      benefits[i].style.display = "none";
+    }
+    if(benefits_index > benefits.length-1){benefits_index = 0}
+    benefits[benefits_index].style.display = "block";
+    benefits_index++;
+    Help_TimeEnd = setTimeout(toggle_benefits, 3000);
+}
