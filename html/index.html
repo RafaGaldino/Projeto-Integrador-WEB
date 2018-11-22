@@ -4,13 +4,16 @@
     <meta charset="utf-8"/>
     <meta name="description" content="ESCREVER DEPOIS"/>
     <meta name="keywords" content="ESCREVER DEPOIS"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="content-language" content="pt-br"/>
     <meta name="DC.Identifier" content="URL"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#00a585" /> <!--Chrome-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00a585"><!--Safari-->
+    <meta name="msapplication-navbutton-color" content="#00a585"><!--Windows phone-->
+    <meta http-equiv="content-language" content="pt-br"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/index.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="../images/pata_ico.ico"/>
-    <link href="https://fonts.googleapis.com/css?family=Francois+One|Gloria+Hallelujah|Merienda|Yellowtail" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Gloria+Hallelujah|Merienda|Yellowtail|Merienda+One" rel="stylesheet">
     <script src="../javascript/index.js"></script>
     <title>BompraCachorro!</title>
   </head>
@@ -113,23 +116,82 @@
             </div>
           </div>
         </section>
-        <!--
         <section id="profiles">
-          <div>
-            <img style="width: 400px;" src="../images/profile1.jpg" alt=""/>
-            <div>
-              <h2> Dra. Ana Tereza de A. Vasques.</h2>
+            <h1>Sobre nós</h1>
+            <div class="block1">
+              <div class="part1">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+              </div>
+              <div class="part2">
+                <div class="purpose">A missão, em suma, é o detalhamento da razão de ser da empresa e o que ela pretende oferecer à sociedade por meio de um modelo de negócios viável</div>
+                <div class="purpose">Visão é uma espécie de “sonho impossível” que fornece à empresa direcionamento para os próximos 10 a 20 anos.</div>
+                <div class="purpose">Valores: comportamentos e atitudes que são defendidos e utilizados pela empresa.</div>
+              </div>
+            </div>
+          <div class="block2">
+            <div class="profile prof1">
+              <img src="../images/profileM.jpg" alt="" />
+              <h2>Ana Tereza de A. Vasques</h2>
+              <h4>Medica Veterinária</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet commodo ante. Suspendisse tristique congue auctor. Curabitur eget eros suscipit,
-                laoreet odio quis, elementum quam. Nunc lobortis ligula quis ante porttitor, vitae mollis libero vestibulum. Duis at vestibulum arcu. Quisque efficitur
-                iaculis ante, vitae placerat risus semper ac. Praesent finibus auctor lorem tristique molestie. Aenean eu condimentum urna. Proin at massa imperdiet,
-                consectetur tellus non, tempor erat. Nullam ut purus est. Curabitur ac mi nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia Curae;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia placerat urna,
+                tincidunt finibus dui tempor vitae. Donec vel lorem nulla. Aliquam erat volutpat.
+                Duis sit amet ante mattis, commodo mauris vitae, auctor risus.
+              </p>
+            </div>
+            <div class="profile prof2">
+              <img src="../images/profileH.jpeg" alt="" />
+              <h2>Miguel Teixeira Sousa</h2>
+              <h4>Medico Veterinário</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia placerat urna,
+                tincidunt finibus dui tempor vitae. Donec vel lorem nulla. Aliquam erat volutpat.
+                Duis sit amet ante mattis, commodo mauris vitae, auctor risus.
               </p>
             </div>
           </div>
         </section>
-      -->
+        <section id="contact">
+          <div class="center">
+            <div id="ctbloco2">
+              <img src="../images/tel_dog.png"/>
+              <div class="whatsapp"><img src="../images/whatsapp.png"/><span>(11) 94707-9838</span></div>
+              <div class="whatsapp"><img src="../images/whatsapp.png"/><span>(11) 95806-9228</span></div>
+            </div>
+            <div id="ctbloco1">
+              <p>Para mais informações preencha o formulário ou se preferir envie-nos uma mensagem por <strong>Whatsapp</strong> e nossa equipe de colaboradores entrará em contato o mais breve possível</p>
+              <form action="" method="post">
+                <p class="line"><label for="ctname">Nome:</label><input type="text" name="contact_name" required="required" autocomplete="off" id="ctname"/></p>
+                <p class="line"><label for="ctemail">Email:</label><input type="email" name="contact_email" required="required" autocomplete="off" spellcheck="false" id="ctemail"/></p>
+                <p class="line"><label for="cttel">Telefone:</label><input type="text" name="contact_tel" required="required" autocomplete="off" onkeypress="mascara(this,telefone)" id="cttel"/></p>
+                <p><label for="ctmensage">Mensagem:</label></p><textarea class="line" name="mensage" required="required" autocomplete="off" rows="10" id="ctmensage"></textarea>
+                <p></sp><input type="submit" value="Enviar"/></p>
+              </form>
+            </div>
+          </div>
+          <div id="ctbloco3">
+            <h1>Venha nos fazer uma visita</h1>
+            <p>Av. Maria Antônia Martins, 39 - Jardim Peri, São Paulo</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.901707393763!2d-46.65779198553524!3d-23.464009763888363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef76be59155bb%3A0x771bc5128a325a0!2sAv.+Maria+Ant%C3%B4nia+Martins%2C+39+-+Jardim+Peri%2C+S%C3%A3o+Paulo+-+SP%2C+02650-030!5e0!3m2!1spt-BR!2sbr!4v1542819909094" width="100%" height="250px"  frameborder="0" style="border:0" allowfullscreen></iframe>
+            <h2>HORÁRIO DE FUNCIONAMENTO:</h2>
+            <p>2ª a 6ª feira, exceto em feriados, das 8h15 às 18h Sábado das 8h30 às 14h</p>
+          </div>
+        </section>
+        <footer>
+          <p>© CopyRight - by Rafael G. Andrade</p>
+          <p><a href="mailto:rga.investor@outlook.com">rga.investor@outlook.com</a></p>
+          <div class="tooltip">
+            <img src="../images/freepik2.png"/>
+            <span class="tooltiptext"><a href="https://www.freepik.com/free-photo/dog-with-bone_2009009.htm" target="_blank">One image of this website was designed by freepik</a></span>
+          </div>
+        </footer>
     </div>
   </body>
 </html>

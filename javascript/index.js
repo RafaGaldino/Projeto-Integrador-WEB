@@ -132,3 +132,23 @@ window.onresize = function(){hide_benefits()}
     benefits_index++;
     Help_TimeEnd = setTimeout(toggle_benefits, 3000);
 }
+//Mascara de formulário é um pre-formatação visual para entrada de dados
+function mascara (o,f) {
+    obj = o;
+    func = f;
+    setTimeout("atualiza()",0.1);
+}
+function atualiza () {
+    obj.value = func(obj.value);
+}
+function telefone (v){
+    v = v.replace(/\D/g,"");
+    v = v.replace(/(\d{2})/,"($1) ");
+    if (v.length<14){
+        v = v.replace(/(\d{4})/,"$1-");
+    }
+    else {
+        v= v.replace(/(\d{5})/,"$1-");
+    }
+    return v
+}
